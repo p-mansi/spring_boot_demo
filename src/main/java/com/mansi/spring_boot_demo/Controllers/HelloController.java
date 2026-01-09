@@ -19,4 +19,11 @@ public class HelloController {
                 "I enjoy solving problems, writing efficient code, and working on scalable systems. I value continuous learning, collaboration, and clear communication, and I adapt quickly to new technologies and project requirements. I am eager to grow as a developer and contribute meaningfully to impactful software solutions.</center>";
     }
 
+    @GetMapping("/about-json")
+    public About about_json(){
+        return new About("I am a passionate and detail-oriented Java Developer...",
+                "Java, Spring Boot, RESTful APIs, SQL",
+                "I enjoy solving problems, writing efficient code, and working on scalable systems. I value continuous learning, collaboration, and clear communication, and I adapt quickly to new technologies and project requirements.");
+    }
+
 }
