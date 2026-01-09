@@ -1,6 +1,9 @@
 package com.mansi.spring_boot_demo.Controllers;
 
+import com.mansi.spring_boot_demo.DTOs.About;
+import com.mansi.spring_boot_demo.DTOs.Hello;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
