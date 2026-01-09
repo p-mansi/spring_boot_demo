@@ -2,9 +2,9 @@ package com.mansi.spring_boot_demo.Controllers;
 
 import com.mansi.spring_boot_demo.DTOs.About;
 import com.mansi.spring_boot_demo.DTOs.Hello;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.mansi.spring_boot_demo.DTOs.UserRequest;
+import com.mansi.spring_boot_demo.DTOs.UserResponse;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
@@ -32,6 +32,12 @@ public class HelloController {
     @GetMapping("/hello")
     public Hello hello(@RequestParam(defaultValue = "Developer") String name){
         return new Hello("Hello "+name,"Success");
+    }
+
+    @PostMapping("/register")
+    public UserResponse registerUser(@RequestBody UserRequest userRequest){
+        return new UserResponse("User " + userRequest.getName() + " registered successfully",
+                "Success");
     }
 
 }
