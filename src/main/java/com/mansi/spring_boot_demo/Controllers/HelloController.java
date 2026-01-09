@@ -26,4 +26,9 @@ public class HelloController {
                 "I enjoy solving problems, writing efficient code, and working on scalable systems. I value continuous learning, collaboration, and clear communication, and I adapt quickly to new technologies and project requirements.");
     }
 
+    @GetMapping("/hello")
+    public Hello hello(@RequestParam(defaultValue = "Developer") String name){
+        return new Hello("Hello "+name,"Success");
+    }
+
 }
